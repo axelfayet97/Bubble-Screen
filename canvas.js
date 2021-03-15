@@ -1,48 +1,7 @@
-
+'use strict';
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 canvas.style.backgroundColor = '#000';
-
-// c.fillStyle = 'rgba(255, 0, 0, 0.3)';
-// c.fillRect(100, 100, 100, 100);
-// c.fillStyle = 'rgba(0, 255, 0 , 0.3)';
-// c.fillRect(400, 100, 100, 100);
-// c.fillStyle = 'rgba(0, 0, 255, 0.3)';
-// c.fillRect(300, 300, 100, 100);
-// console.log(canvas);
-
-//Line
-// c.beginPath();
-// c.moveTo(50, 300);
-// c.lineTo(300, 100);
-// c.lineTo(400, 300);
-// c.strokeStyle = "#BADA55";
-// c.stroke();
-
-// Arc / Circle
-// c.beginPath();
-// c.arc(300, 300, 30, 0, Math.PI * 2, true);
-// c.strokeStyle = 'blue';
-// c.stroke();
-
-// var circleNumber = 100;
-// var number = Math.round(Math.random()) * 10;
-// color = '#' + (0 * 10000000 + Math.random()).toString(16).substr(2, 6);
-// console.log(color);
-
-
-
-
-// for (var i = 0; i < circleNumber; i++) {
-//         var x = Math.random() * window.innerWidth - 50;
-//         var y = Math.random() * window.innerHeight;
-//         c.beginPath();
-//         c.arc(x, y, 30, 0, Math.PI * 2, true);
-//         c.strokeStyle = color;
-//         c.fillStyle = color;      
-//         c.fill();
-//         c.stroke();
-//     }
 
 var mouse = {
     x: undefined,
@@ -50,7 +9,6 @@ var mouse = {
 }
 var maxRadius = 40;
 //var minRadius = 5;
-
 
 window.addEventListener('mousemove', function(event) {
     mouse.x = event.x;
@@ -63,8 +21,6 @@ window.addEventListener('resize', function() {
     canvas.height = window.innerHeight;
     canvas.style.margin = 0;
 });
-
-
 
 function Circle(x, y, dx , dy, radius, minRadius, color) {
     this.x = x;
